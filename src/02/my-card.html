@@ -1,0 +1,18 @@
+<link rel="import" href="business-card.html" />
+<dom-module id="my-card">
+  <template>
+    <business-card></business-card>
+    <business-card class="red"></business-card>
+    <style>
+      .red {
+        --custom-card-color: red;
+        --custom-text-color: white;
+      }
+    </style>
+  </template>
+  <script>
+    Polymer({
+      is: "my-card"
+    })
+  </script>
+</dom-module>

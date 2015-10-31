@@ -1,0 +1,19 @@
+{
+  "name": "egghead-polymer",
+  "version": "0.0.0",
+  "authors": [
+    "Joe Maddalone <joe@insert-title.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~1.2.0"
+  }
+}

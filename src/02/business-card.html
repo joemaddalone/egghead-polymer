@@ -1,0 +1,75 @@
+<dom-module id="business-card">
+  <template>
+      <h1>Joe Maddalone</h1>
+      <h2>Instructor</h2>
+      <h3>egghead.io</h3>
+     <style>
+      :host {
+        --card-color: #e8e8e8;
+        --text-color: #222;
+      }
+      :host {
+        background-color: var(--custom-card-color,--card-color);
+        box-shadow: 0 0 1px var(--custom-card-color,--card-color);
+        position: relative;
+        font-family: monospace;
+        display: flex;
+        width: 350px;
+        height: 200px;
+        flex-flow: column wrap;
+        margin: 20px;
+      }
+
+      :host:before, :host:after {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 15px;
+        left: 10px;
+        width: 50%;
+        top: 80%;
+        max-width:300px;
+        background: rgba(0, 0, 0, 0.7);
+        box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+        transform: rotate(-3deg);
+      }
+
+      :host:after {
+        transform: rotate(3deg);
+        right: 10px;
+        left: auto;
+      }
+
+      h1,h2,h3 {
+        font-weight: normal;
+        color: var(--custom-text-color,--text-color)
+      }
+
+      h1 {
+        flex:4;
+        padding-top: 50px;
+        font-size: 24px;
+        align-self: center;
+      }
+
+      h2 {
+        flex:3;
+        margin-top: -30px;
+        align-self: center;
+        font-size: 12px;
+      }
+
+      h3 {
+        flex:1;
+        font-size: 14px;
+        align-self: flex-end;
+        margin-right: 20px;
+      }
+    </style>
+  </template>
+  <script>
+    Polymer({
+      is: "business-card"
+    })
+  </script>
+</dom-module>
