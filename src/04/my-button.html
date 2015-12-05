@@ -1,0 +1,18 @@
+<dom-module id="my-button">
+  <template>
+    <content></content>
+  </template>
+  <script>
+    Polymer({
+      is: "my-button",
+      extends: "button",
+      created: function() {
+        this.style.color = 'blue'
+        this.addEventListener('click', this.clickHandler)
+      },
+      clickHandler: function(){
+        this.textContent = this.textContent.split('').reverse().join('')
+      }
+    })
+  </script>
+</dom-module>

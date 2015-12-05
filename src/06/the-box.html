@@ -1,0 +1,35 @@
+<dom-module id="the-box">
+  <template>
+    <div></div>
+    <style>
+      :host {
+        width: 250px;
+        height: 250px;
+        background-color: #222;
+        margin: 15px;
+        display:block;
+      }
+    </style>
+  </template>
+  <script>
+    Polymer({
+      is: "the-box",
+      properties: {
+        opacity: {
+          type: Number,
+          notify: true
+        }
+      },
+      ready: function() {
+        this.style.opacity = this.opacity;
+      },
+      created: function(){
+        var self = this;
+        this.addEventListener('opacity-changed', function(e){
+          self.style.opacity = e.detail.value
+        })
+      }
+
+    })
+  </script>
+</dom-module>

@@ -49,7 +49,7 @@ gulp.task('dev', ['default'], function () {
         server: "dist",
         index: 'index.html',
         port: 9000,
-        files: "**/*.html, **/*.js, **/*.css, !dist/bower_components/**/*.*",
+        files: "**/*.html, **/**/*.html, **/*.js, **/*.css, !dist/bower_components/**/*.*",
         notify: false
     })
 });

@@ -1,0 +1,29 @@
+<dom-module id="prop-element">
+  <template>
+    <h1>[[name]]</h1>
+    <h2>[[position]]</h2>
+  </template>
+  <script>
+    Polymer({
+      is: "prop-element",
+      properties: {
+        name: String,
+        position: {
+          type: String,
+          value: 'Instructor',
+          reflectToAttribute: true,
+          readOnly: true,
+          computed: 'computePosition(name)'
+        }
+      },
+      computePosition: function(name){
+        if(name==="Joe Maddalone"){
+          return 'The Bestest Instructor'
+        }
+        else {
+          return 'Instructor'
+        }
+      }
+    })
+  </script>
+</dom-module>

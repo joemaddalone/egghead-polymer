@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Events</title>
+  <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../bower_components/polymer/polymer.html" />
+  <link rel="import" href="my-range.html" />
+</head>
+<body>
+  <my-range value="15"></my-range>
+  <script>
+  document.querySelector('my-range').addEventListener('valueChanged', function(e){
+    console.log(e.detail.increased)
+  })
+  </script>
+</body>
+</html>
