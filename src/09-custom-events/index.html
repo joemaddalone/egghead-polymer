@@ -8,11 +8,14 @@
   <link rel="import" href="my-range.html" />
 </head>
 <body>
-  <my-range value="15"></my-range>
+  <my-range value="10"></my-range>
   <script>
+
   document.querySelector('my-range').addEventListener('valueChanged', function(e){
-    console.log(e.detail.increased)
-  })
+      console.log(e.detail.increased)
+
+  } )
+
   </script>
 </body>
 </html>

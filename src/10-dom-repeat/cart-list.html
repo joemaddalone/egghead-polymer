@@ -1,26 +1,29 @@
 <dom-module id="cart-list">
   <template>
-    <h1>Cart List:</h1>
     <template is="dom-repeat" items="{{foods}}">
-        <div>
-          <button on-click="add">+</button>
-          <span>Qty: {{item.qty}} - {{item.name}} (#{{index}})</span>
-        </div>
+
+      <div>
+        <button on-click="add">+</button>
+        <span>{{item.qty}} - {{item.name}} (#{{index}})</span>
+
+      </div>
+
     </template>
   </template>
   <script>
     Polymer({
-      is: 'cart-list',
+      is: "cart-list",
       ready: function() {
         this.foods = [
-            {name: 'Pizza', qty: 0},
-            {name: 'Taco', qty: 0},
-            {name: 'Burger', qty: 0}
-        ];
+          {name: 'Pizza', qty: 0},
+          {name: 'Taco', qty: 0},
+          {name: 'Burger', qty: 0}
+        ]
       },
-      add: function(e){
-        e.model.set('item.qty', e.model.item.qty+1);
+      add: function( e ){
+        e.model.set('item.qty', e.model.item.qty +1);
+        console.log(this.foods[0].qty)
       }
-    });
+    })
   </script>
 </dom-module>

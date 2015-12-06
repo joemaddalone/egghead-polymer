@@ -1,0 +1,24 @@
+<dom-module id="child-element">
+  <template>
+    <p>Child</p>
+    <input type="text" value="{{data::input}}" />
+    <p>Output</p>
+    <p>{{data}}</p>
+  </template>
+  <script>
+    Polymer({
+      is: "child-element",
+      properties: {
+        data: {
+          type: String,
+          notify: true
+        }
+      },
+      ready: function() {
+        this.addEventListener('data-changed', function(e){
+          console.log(e.detail.value)
+        })
+      }
+    })
+  </script>
+</dom-module>

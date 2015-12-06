@@ -5,9 +5,9 @@
   <script>
     Polymer({
       is: "my-button",
-      extends: "button",
+      extends: 'button',
       created: function() {
-        this.style.color = 'blue'
+        this.style.color = 'red';
         this.addEventListener('click', this.clickHandler)
       },
       clickHandler: function(){

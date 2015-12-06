@@ -10,18 +10,17 @@
         name: String,
         position: {
           type: String,
-          value: 'Instructor',
           reflectToAttribute: true,
           readOnly: true,
-          computed: 'computePosition(name)'
+          computed: 'computedPosition(name)'
         }
       },
-      computePosition: function(name){
-        if(name==="Joe Maddalone"){
-          return 'The Bestest Instructor'
+      computedPosition: function(name){
+        if( name === "Joe Maddalone" ){
+          return "The Bestest Instructor Ever"
         }
         else {
-          return 'Instructor'
+          return "Instructor"
         }
       }
     })
