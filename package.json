@@ -4,14 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "browser-sync start --files \"**\" --server src --no-notify"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.9.11",
-    "del": "^2.0.2",
-    "gulp": "^3.9.0",
-    "run-sequence": "^1.1.4"
+    "browser-sync": "^2.10.0"
   }
 }

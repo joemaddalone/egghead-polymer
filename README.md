@@ -1,1 +1,3 @@
-`npm install && bower install && gulp dev`
+`npm install`
+
+`npm start`

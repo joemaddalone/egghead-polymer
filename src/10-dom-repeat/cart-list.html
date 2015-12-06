@@ -2,7 +2,10 @@
   <template>
     <h1>Cart List:</h1>
     <template is="dom-repeat" items="{{foods}}">
-        <div><button on-click="add">+</button>Qty: {{item.qty}} - {{item.name}} (#{{index}})</div>
+        <div>
+          <button on-click="add">+</button>
+          <span>Qty: {{item.qty}} - {{item.name}} (#{{index}})</span>
+        </div>
     </template>
   </template>
   <script>
@@ -16,7 +19,7 @@
         ];
       },
       add: function(e){
-        e.model.set('item.qty', e.model.item.qty+1)
+        e.model.set('item.qty', e.model.item.qty+1);
       }
     });
   </script>
